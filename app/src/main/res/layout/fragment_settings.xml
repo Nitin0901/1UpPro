@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/changepassword"
+        android:text="@string/change_password"
+        android:textColor="@color/toolbar_color"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/margin_1.5x"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/text_1.5x"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2"
+        android:background="@color/toolbar_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changepassword"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:text="@string/logout"
+        android:textColor="@color/toolbar_color"
+        app:layout_constraintTop_toBottomOf="@+id/changepassword"
+        android:padding="@dimen/margin_1.5x"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/text_1.5x"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2"
+        android:background="@color/toolbar_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout"/>
+
+
+</android.support.constraint.ConstraintLayout>

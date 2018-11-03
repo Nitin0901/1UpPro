@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.google.gms:google-services:4.0.1'
+        /*   classpath 'me.tatarka:gradle-retrolambda:3.7.0'*/
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        jcenter()
+        google()
+    }
+}
+
+ext {
+    // App dependencies
+
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+
+    supportLibraryVersion = '27.1.1'
+    junitVersion = '4.12'
+    playServicesVersion = '15.0.2'
+
+    playAuthVersion='15.0.1'
+
+    twitterVersion='3.1.1'
+
+    retrofitVersion='2.3.0'
+    calligraphyVersion = '2.2.0'
+    hdodenhofVersion='2.1.0'
+
+    calligraphyVersion='2.3.0'
+    glideVersion='4.1.1'
+    toastyVersion='1.2.5'
+    butterKnifeVersion='8.8.1'
+    daggerVersion='2.11'
+    gsonVersion='2.8.0'
+    okhttpVersion='3.3.1'
+    multidex='1.0.3'
+    okhttpInterceptor='3.6.0'
+    rxandroid='2.0.1'
+    rxjava='2.1.1'
+    rubensousaVersion='1.6.0'
+    retrofitRetrofitAdapter='1.0.0'
+    retrofit2Jackson='2.0.0-beta4'
+    airbnbLottie='2.2.5'
+    facebookLogin='4.29.0'
+    zhanghaiProgressbar='1.4.2'
+    eventbus='2.2.0'
+    junitVersion = '4.12'
+    supportRunner='1.0.2'
+    constraint='1.1.2'
+    espresso='3.0.2'
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

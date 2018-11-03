@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/doneid"
+        android:title="@string/done" />
+    <item
+        android:id="@+id/nextid"
+        android:title="@string/next" />
+    <item
+        android:id="@+id/cancelid"
+        android:title="@string/cancel" />
+</menu>

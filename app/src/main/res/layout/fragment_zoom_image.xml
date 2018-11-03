@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/layout_header"
+        android:id="@+id/layoutid" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/myZoomageView"
+        android:layout_marginTop="@dimen/margin_4.5x"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_43x"/>
+
+</LinearLayout>

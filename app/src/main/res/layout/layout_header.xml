@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_5x"
+        android:background="@color/toolbar_color"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:id="@+id/toolbr_firstImage"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:padding="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_1x"
+            android:contentDescription="@string/first_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:fontFamily="@font/opensanssemibold"
+            android:textColor="@color/textview_white_color"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:id="@+id/toolbr_secondImage"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/second_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/opensanssemibold"
+            android:textColor="@color/textview_white_color"
+            android:id="@+id/toolbr_secondTextview"
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

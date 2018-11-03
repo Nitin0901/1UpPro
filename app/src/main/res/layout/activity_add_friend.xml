@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.app1uppro.modules.addfriend.AddFriend">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:fontFamily="@font/opensansregular"
+        android:gravity="start"
+        android:text="@string/username_or_email"
+        android:textAlignment="textStart"
+        android:textColor="@color/toolbar_color"
+        android:textSize="@dimen/text_2x"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/usernameedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:background="@drawable/edit_shape_background"
+        android:fontFamily="@font/opensansregular"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/margin_1x"
+        android:paddingEnd="@dimen/margin_1.5x"
+        android:paddingStart="@dimen/margin_1.5x"
+        android:textColor="@color/toolbar_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/addfriendbuttonid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_friend_background"
+        android:fontFamily="@font/opensansregular"
+        android:padding="@dimen/margin_0.5x"
+        android:layout_marginTop="@dimen/margin_3.5x"
+        android:text="@string/add_friend"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineright"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/usernameedit" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/margin_5x" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/margin_5x" />
+
+
+</android.support.constraint.ConstraintLayout>

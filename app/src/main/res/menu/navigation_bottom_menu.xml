@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homebottom"
+        android:title="@string/home"
+        android:icon="@drawable/navicon1" />
+    <item android:id="@+id/creatbottom"
+        android:title="@string/create_challenge"
+        android:icon="@drawable/navicon2" />
+    <item android:id="@+id/calloutsbottom"
+        android:title="@string/callouts"
+        android:icon="@drawable/navicon3" />
+</menu>

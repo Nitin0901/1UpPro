@@ -1,0 +1,159 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/videoframe"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_18x"
+        android:layout_marginTop="@dimen/margin_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.codewaves.youtubethumbnailview.ThumbnailView
+            android:id="@+id/videoview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_18x"
+            android:background="@drawable/novideofound"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/yticon"-->
+            <!--android:contentDescription="@string/youtube_icon"-->
+            <!--android:src="@drawable/youtubeicon" />-->
+    </FrameLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/calloutconstraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_0.5x"
+        android:background="@drawable/whiteboxborder"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineright"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/videoframe">
+
+        <TextView
+            android:id="@+id/calloutfrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rules"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:gravity="start"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calloutfrom" />
+
+        <TextView
+            android:id="@+id/videoorientation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:gravity="start"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rules" />
+
+        <TextView
+            android:id="@+id/challengelength"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:gravity="start"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoorientation" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/acceptchallengebtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_1x"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="@dimen/margin_1x"
+        android:background="@drawable/login_button_selector"
+        android:fontFamily="@font/opensanssemibold"
+        android:text="@string/accept_challenge"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/rejectchallengebtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/calloutconstraint" />
+
+    <Button
+        android:id="@+id/rejectchallengebtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_1x"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="@dimen/margin_1x"
+        android:background="@drawable/login_button_selector"
+        android:fontFamily="@font/opensanssemibold"
+        android:text="@string/wuss_out"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineright"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/acceptchallengebtn"
+        app:layout_constraintTop_toBottomOf="@+id/calloutconstraint" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_2"
+        android:layout_marginTop="@dimen/margin_1.5x"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acceptchallengebtn" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/margin_2x" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/margin_2x" />
+
+</android.support.constraint.ConstraintLayout>

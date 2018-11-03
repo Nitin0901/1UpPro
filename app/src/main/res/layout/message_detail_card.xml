@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1x"
+        android:background="@color/grey_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/margin_8.5x"
+        android:layout_height="@dimen/margin_8.5x"
+        android:contentDescription="@string/profile_image"
+        android:padding="@dimen/margin_0.5x"
+        android:layout_marginStart="@dimen/margin_0.5x"
+        android:layout_marginTop="@dimen/margin_0.5x"
+        android:src="@drawable/user_dummy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_0.5x"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userImage"
+        app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+    <TextView
+        android:id="@+id/messagetxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_0.5x"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_1.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/userImage"
+        app:layout_constraintTop_toBottomOf="@+id/userImage" />
+
+    <TextView
+        android:id="@+id/messageDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textColor="@color/grey_color"
+        android:textSize="@dimen/text_1.5x"
+        android:padding="@dimen/margin_0.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userImage"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "725113402961",
+    "firebase_url": "https://uppro-ea720.firebaseio.com",
+    "project_id": "uppro-ea720",
+    "storage_bucket": "uppro-ea720.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725113402961:android:d0251643f51326a5",
+        "android_client_info": {
+          "package_name": "com.app1uppro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725113402961-u2vs634qbejubujgs1vvau2s4qvo156b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app1uppro",
+            "certificate_hash": "09b05da93adf2ea861aa1970ecd8da42e0016fc7"
+          }
+        },
+        {
+          "client_id": "725113402961-va4aj7dtnakfpukt1l8jmtcscgvevkq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx0qDHdHixW9aDejKUA0StfDEGslilTwY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725113402961-va4aj7dtnakfpukt1l8jmtcscgvevkq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

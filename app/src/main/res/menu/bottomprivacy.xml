@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/publicid"
+        android:title="@string/public_privacy" />
+    <item
+        android:id="@+id/privateid"
+        android:title="@string/private_privacy" />
+</menu>

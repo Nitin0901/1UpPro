@@ -1,0 +1,290 @@
+<android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/textview_white_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_password"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color"
+        android:elevation="@dimen/margin_0.5x"
+        android:gravity="center"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/backwhiteicon"
+            android:id="@+id/changebackicon"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:contentDescription="@string/first_image" />
+
+        <TextView
+            android:id="@+id/toolbar_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensanssemibold"
+            android:paddingTop="@dimen/margin_0.5x"
+            android:paddingBottom="@dimen/margin_0.5x"
+            android:gravity="center"
+            android:text="@string/status"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/textview_white_color">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/leftguideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_2x" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/rightguideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_2x" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_1x"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage_profile"
+                    android:layout_width="@dimen/margin_7x"
+                    android:layout_height="@dimen/margin_7x"
+                    android:layout_marginStart="@dimen/margin_2x"
+                    android:src="@drawable/user_dummy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_1x"
+                    android:fontFamily="@font/opensansregular"
+                    android:padding="@dimen/margin_0.5x"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_2x"
+                    app:layout_constraintBottom_toTopOf="@+id/userImage_profile"
+                    app:layout_constraintStart_toEndOf="@+id/userImage_profile"
+                    app:layout_constraintTop_toBottomOf="@+id/userImage_profile" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2x"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:text="@string/challenge_taken"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/challengetaken"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftguideline"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <TextView
+                android:id="@+id/challengetaken"
+                android:layout_width="0dp"
+                android:padding="@dimen/margin_2x"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view1"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2x"
+                android:textSize="@dimen/text_2x"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:text="@string/average_score"
+                app:layout_constraintEnd_toStartOf="@+id/average_score"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <TextView
+                android:id="@+id/average_score"
+                android:layout_width="0dp"
+                android:padding="@dimen/margin_2x"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view2"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2x"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:text="@string/challenge_follow"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/challenge_follow"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/challenge_follow"
+                android:layout_width="0dp"
+                android:padding="@dimen/margin_2x"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view3"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2x"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:text="@string/video_count"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/video_count"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/video_count"
+                android:layout_width="0dp"
+                android:padding="@dimen/margin_2x"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view4"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2x"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:text="@string/challenge_given"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/challenge_given"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/leftguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/challenge_given"
+                android:layout_width="0dp"
+                android:padding="@dimen/margin_2x"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/opensanssemibold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/text_2x"
+                app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/create_challenge_bg"
+                app:layout_constraintTop_toBottomOf="@+id/textView22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

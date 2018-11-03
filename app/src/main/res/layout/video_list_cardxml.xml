@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/categorytextid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_2x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orientationtextid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_1x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categorytextid" />
+
+        <TextView
+            android:id="@+id/rulestextid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_1x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orientationtextid" />
+
+        <TextView
+            android:id="@+id/datetextid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_1x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rulestextid" />
+
+        <FrameLayout
+            android:id="@+id/videoleftframe"
+            android:layout_width="@dimen/margin_18x"
+            android:layout_height="@dimen/margin_18x"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_1x"
+            android:layout_marginTop="@dimen/margin_0.5x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datetextid">
+
+            <com.codewaves.youtubethumbnailview.ThumbnailView
+                android:id="@+id/leftvideoview"
+                android:layout_width="@dimen/margin_15x"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/margin_15x"
+                android:background="@drawable/novideofound"
+                android:foreground="?android:attr/selectableItemBackground"/>
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:id="@+id/leftyticon"-->
+                <!--android:contentDescription="@string/youtube_icon"-->
+                <!--android:src="@drawable/youtubeicon" />-->
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/videorightframe"
+            android:layout_width="@dimen/margin_18x"
+            android:layout_height="@dimen/margin_18x"
+            android:layout_marginTop="@dimen/margin_0.5x"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/videoleftframe"
+            app:layout_constraintTop_toBottomOf="@+id/datetextid">
+
+            <com.codewaves.youtubethumbnailview.ThumbnailView
+                android:id="@+id/rightvideoview"
+                android:layout_width="@dimen/margin_15x"
+                android:layout_height="@dimen/margin_15x"
+                android:layout_gravity="center"
+                android:background="@drawable/novideofound"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:id="@+id/rightyticon"-->
+                <!--android:contentDescription="@string/youtube_icon"-->
+                <!--android:src="@drawable/youtubeicon" />-->
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/clickaccepttextid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensansregular"
+            android:padding="@dimen/margin_2x"
+            android:text="@string/click_here_to_accept_challenge"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_2x"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/videoleftframe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/videoleftframe"
+            app:layout_constraintTop_toTopOf="@+id/videoleftframe" />
+
+
+        <TextView
+            android:id="@+id/leftname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1.5x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/videoleftframe"
+            app:layout_constraintTop_toBottomOf="@+id/leftscoreid" />
+
+        <TextView
+            android:id="@+id/rightname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_0.5x"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1.5x"
+            app:layout_constraintEnd_toEndOf="@+id/videorightframe"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_0.5x"
+            android:layout_marginBottom="@dimen/margin_0.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoleftframe"
+            app:srcCompat="@drawable/vsimage" />
+
+        <View
+            android:id="@+id/challengeview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_2"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leftname" />
+
+        <View
+            android:id="@+id/openview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <ImageView
+            android:id="@+id/leftupicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1x"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoleftframe"
+            app:srcCompat="@drawable/upicon" />
+
+        <ImageView
+            android:id="@+id/rightupicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/videorightframe"
+            app:srcCompat="@drawable/upicon" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_0.5x"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/vote_here"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leftupicon" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_0.5x"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/vote_here"
+            android:textAlignment="center"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/rightupicon" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/overall_score"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/videoleftframe"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/leftscoreid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_0.5x"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="textStart"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:fontFamily="@font/opensansregular"
+            android:text="@string/overall_score"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/rightscoreid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:layout_marginStart="@dimen/margin_0.5x"
+            android:fontFamily="@font/opensansregular"
+            android:textAlignment="textStart"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_1.5x"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rightname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+
+        <android.support.constraint.Group
+            android:id="@+id/acceptshowgroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:constraint_referenced_ids="videorightframe,
+            leftupicon,textView20,textView22,
+            leftscoreid,rightupicon,textView21,
+            textView23,rightscoreid,rightname" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

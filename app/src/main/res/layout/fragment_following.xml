@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgtheme">
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:fontFamily="@font/opensansregular"
+        android:padding="@dimen/margin_0.5x"
+        android:text="@string/following_categories"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_1.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/followcategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/whitebackgroundbtn"
+        android:drawableEnd="@drawable/dropdownicon"
+        android:fontFamily="@font/opensansregular"
+        android:padding="@dimen/text_1.5x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:textSize="@dimen/text_1.2x"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:text="@string/select_category_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <View
+        android:id="@+id/followingview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2"
+        android:layout_marginTop="@dimen/margin_1.5x"
+        android:background="@color/light_grey"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/followcategory" />
+
+    <TextView
+        android:id="@+id/imfollowing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_2.5x"
+        android:fontFamily="@font/opensansregular"
+        android:text="@string/i_m_following"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:textColor="@color/green_color"
+        android:textSize="@dimen/text_2x"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineright"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/followingview" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/followinglisting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_1x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineright"
+        app:layout_constraintStart_toStartOf="@+id/guidelineleft"
+        app:layout_constraintTop_toBottomOf="@+id/imfollowing" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/margin_3x" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/margin_3x" />
+
+</android.support.constraint.ConstraintLayout>

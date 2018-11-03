@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/whiteboxborder"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/categoryname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/opensansregular"
+        android:textSize="@dimen/text_2x"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="@android:color/black" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_2"
+        android:background="@color/green_color"/>
+</LinearLayout>
